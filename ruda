@@ -210,7 +210,7 @@ function looper() {
                                 increaseCurrentRadiusStones()
                             case ("Not overlayed"):
                                 log.v("hitCount = " + hitCount)
-                                if(hitCount < numberOfSearches(2)
+                                if(hitCount < numberOfSearches()
                                     (isThere5Possible() || (searchIron || searchCopper) && getIgnoredItemById(currentStoneId).perc < 1
                                         || searchGold && getIgnoredItemById(currentStoneId).percGold < 100 )) {
                                     log.v("SEARCH")
@@ -218,7 +218,7 @@ function looper() {
                                     log.i("direction = " + direction)
                                     switch (direction) {
                                         case ("good") : {
-                                            clickSearch(2);
+                                            clickSearch();
                                             break;
                                         }
                                         case ("turn_left") : {
